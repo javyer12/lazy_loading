@@ -1,3 +1,5 @@
+- || this is a project made in a platzi course with a template whose owner is jonalvarezz || -
+
 # Snowpack Tailwind
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
