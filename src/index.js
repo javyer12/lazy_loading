@@ -7,6 +7,9 @@
     />
 </div>
 */
+
+import { registerImage } from "./lazy";
+
 const max = 122;
 const min = 1;
 
@@ -27,7 +30,6 @@ const createImageNode  = () => {
     return container;
 
 }
-const newImage = createImageNode();
 const mountNode = document.getElementById("images");
 
 const AddImage = document.getElementById("addImage");
@@ -35,7 +37,7 @@ const AddImage = document.getElementById("addImage");
 const addNewImage = () => {
     const newFox = createImageNode();
     mountNode.appendChild(newFox);
-
+    registerImage(newFox);
 }
 
 AddImage.addEventListener("click",addNewImage );
