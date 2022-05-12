@@ -41,3 +41,9 @@ const addNewImage = () => {
 }
 
 AddImage.addEventListener("click",addNewImage );
+
+//CODE TO ADD
+/* agregar un fondo gris, mientras cargan
+    agregar button para limpiar
+    algunos estilos y animaciones
+*/
