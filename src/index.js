@@ -9,6 +9,7 @@
 */
 
 import { registerImage } from "./lazy";
+import h from "hyperscript";
 
 const max = 122;
 const min = 1;
@@ -16,16 +17,25 @@ const min = 1;
 const randomer = () => Math.floor(Math.random() * (max - min )) + min;
 
 const createImageNode  = () => {
-    const container = document.createElement("div");
-    container.className = "p-4";
+   
+    const image = h("img.mx-auto", {
+        width: "290",
+        height: "280",
+        src : `https://randomfox.ca/images/${randomer()}.jpg`,
+    });
 
-    const image = document.createElement("img");
-    image.className = "mx-auto";
-    image.width = "300";
-    image.height = "200";
-    image.src = `https://randomfox.ca/images/${randomer()}.jpg`;
-
-    container.appendChild(image);
+    const container = h("div.p-4.mt-3",{
+        width: "150",
+        opacity:" 25",
+        style: "background-color: rgba(213,233,222,0.073)",
+    },
+     image);
+    // const background = h("div", {
+    //     style: "background-color: gray",
+    //     width: "290px",
+    //     height: "340px"
+    // })
+    // .appendChild(container);
 
     return container;
 
